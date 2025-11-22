@@ -4,6 +4,8 @@ export default eventHandler((event) => {
     throw createError({
       status: 401,
       statusText: 'Unauthorized',
+      1: token,
+      2: useRuntimeConfig(event).siteToken
     })
   }
   if (token && token.length < 8) {
